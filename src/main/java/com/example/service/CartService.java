@@ -48,6 +48,12 @@ public class CartService extends AbstractService<CartDto> {
 		User user = userRepository.findById(cartDto.getUserId()).orElse(null);
 		Book book = bookRepository.findById(cartDto.getBookId()).orElse(null);
 		if (user != null && book != null) {
+			for (CartDto cartDto2 : getByUserId(user.getId())) {
+				if (book.getId().equals(cartDto2.getBookId())) {
+					cartDto2.setQuantity(cartDto2.getQuantity()+cart.getQuantity());
+					return update(cartDto2);
+				}
+			}
 			cart.setUser(user);
 			cart.setBook(book);
 			return cartRepository.save(cart).toDto();
