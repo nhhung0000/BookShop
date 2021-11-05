@@ -9,7 +9,13 @@ bật cmd lên, cd vào project BookShop rồi gõ mvn spring-boot:run
 
 chờ tải xong hết, để check được chưa thì vào mạng hoặc dùng postman gõ đường dẫn localhost:8080/api/books
 
-
+###############################################################################
+khi gặp bug hoặc lỗi dữ liệu thì vào lại file BookShop\src\main\resources\application.properties
+sửa thuộc tính của spring.jpa.hibernate.ddl-auto
+create-drop là tạo dữ liệu xong rồi xóa (lần chạy sau sẽ không có dữ liệu trước đó) (dùng khi gặp bug dữ liệu nhằm reset lại toàn bộ dữ liệu, bình thườngdùngdùng)
+create là tạo dữ liệu (lần chạy sau vẫn còn)
+update là cập nhật (nếu lần chạy sau có dữ liệu bị thay đổi sẽ cập nhật lại) (nên dùng)
+###############################################################################
 
 
 
