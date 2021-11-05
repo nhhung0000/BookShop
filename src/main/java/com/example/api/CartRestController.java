@@ -31,6 +31,11 @@ public class CartRestController extends AbstractRestController<CartDto> {
 	public CartDto getById(@PathVariable(value = "id") String id) {
 		return cartService.getById(id);
 	}
+	
+	@GetMapping(value = "/api/carts/userId={id}")
+	public List<CartDto> getByUserId(@PathVariable(value = "id") String id) {
+		return cartService.getByUserId(id);
+	}
 
 	@Override
 	@PostMapping(value = "/api/cart")
@@ -50,4 +55,5 @@ public class CartRestController extends AbstractRestController<CartDto> {
 		cartService.delete(id);
 	}
 
+	
 }

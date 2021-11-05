@@ -71,4 +71,8 @@ public class CartService extends AbstractService<CartDto> {
 		cartRepository.deleteById(id);
 	}
 
+	public List<CartDto> getByUserId(String id) {
+		return converter.toDtos(cartRepository.findByUserId(id));
+	}
+
 }
