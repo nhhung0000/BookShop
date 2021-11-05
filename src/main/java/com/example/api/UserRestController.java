@@ -38,6 +38,11 @@ public class UserRestController extends AbstractRestController<UserDto> {
 		return userService.save(userDto);
 	}
 
+	@PostMapping(value = "/api/user/username={username}&&password={password}")
+	public UserDto login(@PathVariable(value = "username") String username, @PathVariable(value = "password") String password) {
+		return userService.login(username, password);
+	}
+	
 	@Override
 	@PutMapping(value = "/api/user")
 	public UserDto update(@RequestBody UserDto userDto) {
@@ -50,4 +55,5 @@ public class UserRestController extends AbstractRestController<UserDto> {
 		userService.delete(id);
 	}
 
+	
 }

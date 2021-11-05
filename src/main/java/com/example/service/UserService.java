@@ -44,6 +44,16 @@ public class UserService extends AbstractService<UserDto> {
 		return userRepository.save(user).toDto();
 	}
 
+	public UserDto login(String username, String password) {
+		List<UserDto> userDtos = getAll();
+		for (UserDto userDto : userDtos) {
+			if (username.equals(userDto.getUsername()) && password.equals(userDto.getPassword())) {
+				return userDto;
+			}
+		}
+		return null;
+	}
+	
 	@Override
 	public UserDto update(UserDto userDto) {
 		User user = userRepository.findById(userDto.getId()).orElse(null);
