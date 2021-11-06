@@ -11,11 +11,16 @@ chờ tải xong hết, để check được chưa thì vào mạng hoặc dùng
 
 ###############################################################################
 Kích vào dấu edit nhìn cho rõ, không hiểu sao nó đưa lên 1 dòng nhìn loạn vl
+
 Khi gặp bug hoặc lỗi dữ liệu thì vào lại file BookShop\src\main\resources\application.properties
 sửa thuộc tính của spring.jpa.hibernate.ddl-auto
-create-drop là tạo dữ liệu xong rồi xóa (lần chạy sau sẽ không có dữ liệu trước đó) (dùng khi gặp bug dữ liệu nhằm reset lại toàn bộ dữ liệu, bình thường ít dùng)
-create là tạo dữ liệu (lần chạy sau vẫn còn)
-update là cập nhật (nếu lần chạy sau có dữ liệu bị thay đổi sẽ cập nhật lại) (nên dùng)
+-   create-drop là tạo dữ liệu xong rồi xóa (lần chạy sau sẽ không có dữ liệu trước đó) (dùng khi gặp bug dữ liệu nhằm reset lại toàn bộ dữ liệu, bình thường ít dùng)
+-   create là tạo dữ liệu (lần chạy sau vẫn còn)
+-   update là cập nhật (nếu lần chạy sau có dữ liệu bị thay đổi sẽ cập nhật lại) (nên dùng)
+
+Không rõ api thì vào BookShop/src/main/java/com/example/api/ có phân thành các class đối tượng, đầu mỗi hàm thực thi sẽ có url 
+
+Dùng postman để thấy cấu trúc json đầu ra, cấu trúc json đầu vào được miêu tả ở dưới tại input 
 ###############################################################################
 
 
