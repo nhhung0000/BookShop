@@ -43,6 +43,19 @@ vd: {
 }
 output:
 
+Đăng nhập user
+POST: /api/user/username={username}&&password={password}
+input:
+output: Object Json {}
+vd: {
+    "username": "hung",
+    "password": "hung123",
+    "name": "Hung",
+    "image":"",
+    "phone": "1234567890",
+    "address": "da nang",
+}
+
 Cập nhật user
 PUT: /api/user
 input: Object Json {} (như trên nhưng thêm thuộc tính id vd: "id": "user_5a25c4fd45",
