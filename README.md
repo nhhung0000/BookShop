@@ -10,6 +10,7 @@ bật cmd lên, cd vào project BookShop rồi gõ mvn spring-boot:run
 chờ tải xong hết, để check được chưa thì vào mạng hoặc dùng postman gõ đường dẫn localhost:8080/api/books
 
 ###############################################################################
+
 Kích vào dấu edit nhìn cho rõ, không hiểu sao nó đưa lên 1 dòng nhìn loạn vl
 
 Khi gặp bug hoặc lỗi dữ liệu thì vào lại file BookShop\src\main\resources\application.properties
@@ -21,6 +22,7 @@ sửa thuộc tính của spring.jpa.hibernate.ddl-auto
 Không rõ api thì vào BookShop/src/main/java/com/example/api/ có phân thành các class đối tượng, đầu mỗi hàm thực thi sẽ có url 
 
 Dùng postman để thấy cấu trúc json đầu ra, cấu trúc json đầu vào được miêu tả ở dưới tại input 
+
 ###############################################################################
 
 
